@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>${title}</title>
+    <link rel="stylesheet"
+          target="_blank" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+    <span id="load_date">${date}</span><br>
+    <#if views!= 0 || isRestrictionPresent>
+    <span id="views_restriction">${views} more views allowed<br></span>
+    </#if>
+    <#if time != 0>
+    <span id="time_restriction">The code will be available for ${time} seconds<br></span>
+    </#if>
+    <pre id="code_snippet"><code class="java">${code}</code></pre>
+    <br>
+
+</body>
+</html>
